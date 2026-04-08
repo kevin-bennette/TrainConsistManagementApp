@@ -1,51 +1,35 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TrainConsistManagementApp {
 
-    public static void bubbleSort(int[] capacities) {
-        int n = capacities.length;
-
-        for (int i = 0; i < n - 1; i++) {
-
-            for (int j = 0; j < n - 1 - i; j++) {
-
-                if (capacities[j] > capacities[j + 1]) {
-                    int temp = capacities[j];
-                    capacities[j] = capacities[j + 1];
-                    capacities[j + 1] = temp;
-                }
-            }
-        }
-    }
-
-    public static void display(int[] capacities) {
-        for (int cap : capacities) {
-            System.out.print(cap + " ");
-        }
-        System.out.println();
+    public static void sortBogieNames(String[] bogieNames) {
+        Arrays.sort(bogieNames);
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("=== Train Consist Management App ===");
-        System.out.print("Enter number of passenger bogies: ");
+        System.out.print("Enter number of bogies: ");
         int n = scanner.nextInt();
+        scanner.nextLine();
 
-        int[] capacities = new int[n];
+        String[] bogieNames = new String[n];
 
-        System.out.println("Enter capacities:");
+        System.out.println("Enter bogie names:");
         for (int i = 0; i < n; i++) {
-            capacities[i] = scanner.nextInt();
+            bogieNames[i] = scanner.nextLine();
         }
 
         System.out.println("\nBefore Sorting:");
-        display(capacities);
+        System.out.println(Arrays.toString(bogieNames));
 
-        bubbleSort(capacities);
+        sortBogieNames(bogieNames);
 
-        System.out.println("\nAfter Sorting (Ascending Order):");
-        display(capacities);
+        System.out.println("\nAfter Sorting (Alphabetical Order):");
+        System.out.println(Arrays.toString(bogieNames));
 
         scanner.close();
     }
