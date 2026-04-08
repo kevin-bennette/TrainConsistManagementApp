@@ -20,7 +20,7 @@ public class TrainConsistManagementApp {
             int comparison = key.compareTo(bogieIds[mid]);
 
             if (comparison == 0) {
-                return true; // Found
+                return true; 
             } else if (comparison > 0) {
                 low = mid + 1;
             } else {
@@ -38,7 +38,7 @@ public class TrainConsistManagementApp {
         System.out.println("=== Train Consist Management App ===");
         System.out.print("Enter number of bogies: ");
         int n = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); 
 
         String[] bogieIds = new String[n];
 
