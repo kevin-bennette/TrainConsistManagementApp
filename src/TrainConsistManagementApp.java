@@ -11,7 +11,7 @@ public class TrainConsistManagementApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== Train Consist Management App ===");
+        System.out.println("==== Train Consist Management App ====");
         System.out.print("Enter number of bogies: ");
         int n = scanner.nextInt();
         scanner.nextLine();
